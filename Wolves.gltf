@@ -52,6 +52,9 @@
       }
    ],
    "asset" : {
+      "extras" : {
+         "GOOGLE_processor_version" : 294144208
+      },
       "generator" : "Obj2GltfConverter",
       "version" : "2.0"
    },
@@ -94,6 +97,42 @@
          "uri" : "Wolves.bin"
       }
    ],
+   "cameras" : [
+      {
+         "perspective" : {
+            "yfov" : 0.7853981633974483,
+            "znear" : 0.1000000014901161
+         },
+         "type" : "perspective"
+      }
+   ],
+   "extensions" : {
+      "KHR_lights_punctual" : {
+         "lights" : [
+            {
+               "color" : [ 1, 0.9333333333333333, 0.8666666666666667 ],
+               "intensity" : 0.25,
+               "name" : "headLight",
+               "type" : "directional"
+            },
+            {
+               "color" : [ 1, 0.9333333333333333, 0.8666666666666667 ],
+               "intensity" : 0.324999988079071,
+               "name" : "keyLight",
+               "type" : "directional"
+            }
+         ]
+      }
+   },
+   "extensionsUsed" : [ "GOOGLE_backgrounds", "GOOGLE_camera_settings", "KHR_lights_punctual" ],
+   "extras" : {
+      "GOOGLE_initial_camera_motion" : {
+         "motionPath" : "FULL_ROTATION"
+      },
+      "GOOGLE_lighting_rig" : {
+         "disableShadows" : false
+      }
+   },
    "images" : [
       {
          "mimeType" : "image/png",
@@ -138,6 +177,57 @@
       {
          "mesh" : 0,
          "name" : "node-0"
+      },
+      {
+         "children" : [ 2 ]
+      },
+      {
+         "children" : [ 3 ],
+         "extras" : {
+            "isTransformNode" : 1
+         },
+         "translation" : [ -0.02413028955459597, 3.504438924423871, -0.1385378135539391 ]
+      },
+      {
+         "children" : [ 0 ],
+         "translation" : [ 0.02413028955459597, -3.504438924423871, 0.1385378135539391 ]
+      },
+      {
+         "camera" : 0,
+         "children" : [ 5 ],
+         "rotation" : [
+            -0.1722038457720331,
+            -0.2866499539792832,
+            -0.05245883703265862,
+            0.9409706211153342
+         ],
+         "translation" : [ -9.041852196423516, 9.63079071133296, 13.28779763718299 ]
+      },
+      {
+         "extensions" : {
+            "KHR_lights_punctual" : {
+               "light" : 0
+            }
+         },
+         "extras" : {
+            "isHeadLight" : 1
+         },
+         "name" : "headLightNode",
+         "translation" : [ -5.880340341353607, 2.940170170676804, 2.940170170676804 ]
+      },
+      {
+         "extensions" : {
+            "KHR_lights_punctual" : {
+               "light" : 1
+            }
+         },
+         "extras" : {
+            "isKeyLight" : 1
+         },
+         "name" : "keyLightNode",
+         "rotation" : [ -0.7505326882858236, -0.3752663441429118, 0, 0.5439447166468927 ],
+         "scale" : [ 0, 0, 5.939143744767144 ],
+         "translation" : [ -5.939143744767144, 14.92475996165858, -6.038198332227181 ]
       }
    ],
    "samplers" : [
@@ -147,10 +237,34 @@
          "wrapT" : 10497
       }
    ],
+   "scene" : 0,
    "scenes" : [
       {
+         "extensions" : {
+            "GOOGLE_backgrounds" : {
+               "color" : [ 0.9333333333333333, 0.9333333333333333, 0.9333333333333333 ]
+            },
+            "GOOGLE_camera_settings" : {}
+         },
+         "extras" : {
+            "GOOGLE_camera_index" : {
+               "cameraIndex" : 0,
+               "nodeIndex" : 4
+            },
+            "GOOGLE_geometry_data" : {
+               "stats" : {
+                  "centroid" : [ 0, 3.046472472124294, -0.09905458746003787 ],
+                  "radius" : 5.880340341353607,
+                  "stdev" : 3.582016874019306
+               },
+               "visualCenterPoint" : [ -0.02413028955459597, 3.504438924423871, -0.1385378135539391 ]
+            },
+            "GOOGLE_hemi_light" : {
+               "groundColor" : [ 0.9333333333333333, 0.9333333333333333, 0.9333333333333333 ]
+            }
+         },
          "name" : "scene-0",
-         "nodes" : [ 0 ]
+         "nodes" : [ 1, 4, 6 ]
       }
    ],
    "textures" : [
